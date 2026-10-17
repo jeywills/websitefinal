@@ -1,0 +1,33 @@
+{
+  "name": "outcome-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Outcome API: state a goal, constraints and budget; get a quote, a task, and a bill only on delivery.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch scripts/dev.ts",
+    "start": "tsx scripts/dev.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "demo": "bash scripts/demo.sh"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.5",
+    "@vercel/functions": "^3.10.1",
+    "hono": "^4.13.13",
+    "pg": "^8.23.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.10",
+    "@types/node": "^22.20.5",
+    "@types/pg": "^8.23.1",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.5"
+  }
+}
